@@ -56,10 +56,10 @@
 		CC4A1A2E2619AEDF00FDF4AC /* helloword */ = {
 			isa = PBXGroup;
 			children = (
+				CCB28ABF261B5D16004A9A9B /* Model */,
+				CCB28ABE261B5D0E004A9A9B /* ViewModel */,
+				CCB28ABD261B5D05004A9A9B /* View */,
 				CC4A1A2F2619AEDF00FDF4AC /* hellowordApp.swift */,
-				CC4A1A312619AEDF00FDF4AC /* MainView.swift */,
-				CC4A1A3F2619B05800FDF4AC /* WordModel.swift */,
-				CC4A1A422619B1E300FDF4AC /* WordViewModel.swift */,
 				CC4A1A332619AEE100FDF4AC /* Assets.xcassets */,
 				CC4A1A382619AEE100FDF4AC /* Info.plist */,
 				CC4A1A352619AEE100FDF4AC /* Preview Content */,
@@ -73,6 +73,30 @@
 				CC4A1A362619AEE100FDF4AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CCB28ABD261B5D05004A9A9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC4A1A312619AEDF00FDF4AC /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCB28ABE261B5D0E004A9A9B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC4A1A422619B1E300FDF4AC /* WordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCB28ABF261B5D16004A9A9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC4A1A3F2619B05800FDF4AC /* WordModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

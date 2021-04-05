@@ -33,8 +33,8 @@ struct MainView: View {
                     }.onMove(perform: self.move)
                     .onDelete(perform: self.delete)
                 }.listStyle(GroupedListStyle())
-                .navigationBarTitle("TOEIC")
-                .navigationBarItems(trailing: EditButton())
+                .navigationBarTitle("WORDS")
+                .navigationBarItems(leading: EditButton())
             }
         }
     }

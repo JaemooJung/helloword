@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37488603261DDE4400993F5D /* DBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37488602261DDE4400993F5D /* DBViewModel.swift */; };
+		37488606261DE17E00993F5D /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37488605261DE17E00993F5D /* card.swift */; };
 		CC4A1A302619AEDF00FDF4AC /* hellowordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A1A2F2619AEDF00FDF4AC /* hellowordApp.swift */; };
 		CC4A1A322619AEDF00FDF4AC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A1A312619AEDF00FDF4AC /* MainView.swift */; };
 		CC4A1A342619AEE100FDF4AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4A1A332619AEE100FDF4AC /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37488602261DDE4400993F5D /* DBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBViewModel.swift; sourceTree = "<group>"; };
+		37488605261DE17E00993F5D /* card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = card.swift; sourceTree = "<group>"; };
 		CC4A1A2C2619AEDF00FDF4AC /* helloword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helloword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4A1A2F2619AEDF00FDF4AC /* hellowordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hellowordApp.swift; sourceTree = "<group>"; };
 		CC4A1A312619AEDF00FDF4AC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				CC4A1A332619AEE100FDF4AC /* Assets.xcassets */,
 				CC4A1A382619AEE100FDF4AC /* Info.plist */,
 				CC4A1A352619AEE100FDF4AC /* Preview Content */,
+				37488602261DDE4400993F5D /* DBViewModel.swift */,
+				37488605261DE17E00993F5D /* card.swift */,
 			);
 			path = helloword;
 			sourceTree = "<group>";
@@ -145,7 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC4A1A322619AEDF00FDF4AC /* MainView.swift in Sources */,
+				37488603261DDE4400993F5D /* DBViewModel.swift in Sources */,
 				CC4A1A432619B1E300FDF4AC /* WordViewModel.swift in Sources */,
+				37488606261DE17E00993F5D /* card.swift in Sources */,
 				CC4A1A402619B05800FDF4AC /* WordModel.swift in Sources */,
 				CC4A1A302619AEDF00FDF4AC /* hellowordApp.swift in Sources */,
 			);

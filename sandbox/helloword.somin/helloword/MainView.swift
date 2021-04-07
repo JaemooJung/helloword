@@ -9,16 +9,17 @@ import SwiftUI
 import Combine
 
 struct MainView: View {
+    @EnvironmentObject var modelData : DBViewModel
     @ObservedObject var wordViewModel = WordViewModel()
     @State var newWord: String = ""
     
     var addNewWordTextInput: some View {
         HStack {
             TextField("Add a new word",
-                      text: self.$newWord)
-            Button(action: self.addNewWord, label: {
-                Text("Add Word")
-            })
+                      text: $modelData.name)
+            Button(action: modelData.addData(presentation: Presentation), label: {
+               Text("Add Word")
+           })
         }
     }
     
@@ -27,9 +28,9 @@ struct MainView: View {
             VStack {
                 addNewWordTextInput.padding()
                 List {
-                    ForEach(self.wordViewModel.words) {
+                    ForEach(modelData.words) {
                         word in
-                        Text(word.word)
+                        Text(word.name)
                     }.onMove(perform: self.move)
                     .onDelete(perform: self.delete)
                 }.listStyle(GroupedListStyle())
@@ -38,13 +39,14 @@ struct MainView: View {
             }
         }
     }
+    .onDisappear(perform:modelData.deInitData)
     
-    func addNewWord() {
-        if newWord != "" {
-            wordViewModel.words.append(Word(word: newWord))
-        }
-        newWord = ""
-    }
+//    func addNewWord() {
+//        if newWord != "" {
+//            wordViewModel.words.append(Word(word: newWord))
+//        }
+//        newWord = ""
+//    }
     
     func move(from source: IndexSet, to destination: Int) {
         wordViewModel.words.move(fromOffsets: source, toOffset: destination)

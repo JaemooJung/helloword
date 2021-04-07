@@ -13,6 +13,7 @@
 		CC4A1A372619AEE100FDF4AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4A1A362619AEE100FDF4AC /* Preview Assets.xcassets */; };
 		CC4A1A402619B05800FDF4AC /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A1A3F2619B05800FDF4AC /* WordModel.swift */; };
 		CC4A1A432619B1E300FDF4AC /* WordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A1A422619B1E300FDF4AC /* WordViewModel.swift */; };
+		CC822E93261CB1470037A95C /* Array+getIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC822E92261CB1470037A95C /* Array+getIndex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CC4A1A382619AEE100FDF4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC4A1A3F2619B05800FDF4AC /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		CC4A1A422619B1E300FDF4AC /* WordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewModel.swift; sourceTree = "<group>"; };
+		CC822E92261CB1470037A95C /* Array+getIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+getIndex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,11 @@
 		CC4A1A2E2619AEDF00FDF4AC /* helloword */ = {
 			isa = PBXGroup;
 			children = (
+				CC822E91261CB0AC0037A95C /* Extensions */,
+				CCB28ABF261B5D16004A9A9B /* Model */,
+				CCB28ABE261B5D0E004A9A9B /* ViewModel */,
+				CCB28ABD261B5D05004A9A9B /* View */,
 				CC4A1A2F2619AEDF00FDF4AC /* hellowordApp.swift */,
-				CC4A1A312619AEDF00FDF4AC /* MainView.swift */,
-				CC4A1A3F2619B05800FDF4AC /* WordModel.swift */,
-				CC4A1A422619B1E300FDF4AC /* WordViewModel.swift */,
 				CC4A1A332619AEE100FDF4AC /* Assets.xcassets */,
 				CC4A1A382619AEE100FDF4AC /* Info.plist */,
 				CC4A1A352619AEE100FDF4AC /* Preview Content */,
@@ -73,6 +76,38 @@
 				CC4A1A362619AEE100FDF4AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC822E91261CB0AC0037A95C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC822E92261CB1470037A95C /* Array+getIndex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CCB28ABD261B5D05004A9A9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC4A1A312619AEDF00FDF4AC /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCB28ABE261B5D0E004A9A9B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC4A1A422619B1E300FDF4AC /* WordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCB28ABF261B5D16004A9A9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC4A1A3F2619B05800FDF4AC /* WordModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +183,7 @@
 				CC4A1A432619B1E300FDF4AC /* WordViewModel.swift in Sources */,
 				CC4A1A402619B05800FDF4AC /* WordModel.swift in Sources */,
 				CC4A1A302619AEDF00FDF4AC /* hellowordApp.swift in Sources */,
+				CC822E93261CB1470037A95C /* Array+getIndex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

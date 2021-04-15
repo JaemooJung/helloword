@@ -11,6 +11,7 @@ struct MainView: View {
     
     //MARK: Variables
     
+    // 뷰에 데이터를 뿌려줄 뷰모델 선언
     @ObservedObject var wordViewModel = WordViewModel()
     @State var newWord: String = ""
     
@@ -29,6 +30,7 @@ struct MainView: View {
                 Text("Add Word")
             })
         }
+        
     }
     
     //TODO: 단어의 정렬 바꾸기 -> 안 외운건 추가한 순서대로, 외운건 외웠다고 표시한 순서대로
@@ -47,6 +49,7 @@ struct MainView: View {
                             Button(action: { wordViewModel.markWordIsMemorized(word: word) }, label: { Text("") })
                             // _______________________
                         }
+                        
                     }.onMove(perform: wordViewModel.move)
                     .onDelete(perform: wordViewModel.delete)
 
@@ -73,7 +76,6 @@ struct MainView: View {
     }
     
     //MARK: Functions
-    
     
 }
 

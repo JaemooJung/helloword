@@ -67,7 +67,6 @@ struct MainView: View {
                         }.onMove(perform: wordViewModel.move)
                         .onDelete(perform: wordViewModel.delete)
                     }
-                    
                 }
                 .navigationBarTitle("WORDS")
                 .navigationBarItems(trailing: EditButton())

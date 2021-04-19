@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC4A1A302619AEDF00FDF4AC /* hellowordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A1A2F2619AEDF00FDF4AC /* hellowordApp.swift */; };
-		CC4A1A322619AEDF00FDF4AC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A1A312619AEDF00FDF4AC /* MainView.swift */; };
-		CC4A1A342619AEE100FDF4AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4A1A332619AEE100FDF4AC /* Assets.xcassets */; };
-		CC4A1A372619AEE100FDF4AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4A1A362619AEE100FDF4AC /* Preview Assets.xcassets */; };
-		CC4A1A402619B05800FDF4AC /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A1A3F2619B05800FDF4AC /* WordModel.swift */; };
-		CC4A1A432619B1E300FDF4AC /* WordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A1A422619B1E300FDF4AC /* WordViewModel.swift */; };
+		CC5598BF262DB6A8008EE8D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5598BE262DB6A8008EE8D4 /* AppDelegate.swift */; };
+		CC5598C1262DB6A8008EE8D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5598C0262DB6A8008EE8D4 /* SceneDelegate.swift */; };
+		CC5598C3262DB6A8008EE8D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5598C2262DB6A8008EE8D4 /* ContentView.swift */; };
+		CC5598C5262DB6AA008EE8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5598C4262DB6AA008EE8D4 /* Assets.xcassets */; };
+		CC5598C8262DB6AA008EE8D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5598C7262DB6AA008EE8D4 /* Preview Assets.xcassets */; };
+		CC5598CB262DB6AA008EE8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5598C9262DB6AA008EE8D4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CC4A1A2C2619AEDF00FDF4AC /* helloword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helloword.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC4A1A2F2619AEDF00FDF4AC /* hellowordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hellowordApp.swift; sourceTree = "<group>"; };
-		CC4A1A312619AEDF00FDF4AC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		CC4A1A332619AEE100FDF4AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC4A1A362619AEE100FDF4AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CC4A1A382619AEE100FDF4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC4A1A3F2619B05800FDF4AC /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
-		CC4A1A422619B1E300FDF4AC /* WordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewModel.swift; sourceTree = "<group>"; };
+		CC5598BB262DB6A8008EE8D4 /* HelloWord_alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWord_alpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5598BE262DB6A8008EE8D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC5598C0262DB6A8008EE8D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CC5598C2262DB6A8008EE8D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC5598C4262DB6AA008EE8D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC5598C7262DB6AA008EE8D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC5598CA262DB6AA008EE8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC5598CC262DB6AA008EE8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CC4A1A292619AEDF00FDF4AC /* Frameworks */ = {
+		CC5598B8262DB6A8008EE8D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,103 +37,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC4A1A232619AEDF00FDF4AC = {
+		CC5598B2262DB6A8008EE8D4 = {
 			isa = PBXGroup;
 			children = (
-				CC4A1A2E2619AEDF00FDF4AC /* helloword */,
-				CC4A1A2D2619AEDF00FDF4AC /* Products */,
+				CC5598BD262DB6A8008EE8D4 /* HelloWord_alpha */,
+				CC5598BC262DB6A8008EE8D4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CC4A1A2D2619AEDF00FDF4AC /* Products */ = {
+		CC5598BC262DB6A8008EE8D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CC4A1A2C2619AEDF00FDF4AC /* helloword.app */,
+				CC5598BB262DB6A8008EE8D4 /* HelloWord_alpha.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CC4A1A2E2619AEDF00FDF4AC /* helloword */ = {
+		CC5598BD262DB6A8008EE8D4 /* HelloWord_alpha */ = {
 			isa = PBXGroup;
 			children = (
-				CCB28ABF261B5D16004A9A9B /* Model */,
-				CCB28ABE261B5D0E004A9A9B /* ViewModel */,
-				CCB28ABD261B5D05004A9A9B /* View */,
-				CC4A1A2F2619AEDF00FDF4AC /* hellowordApp.swift */,
-				CC4A1A332619AEE100FDF4AC /* Assets.xcassets */,
-				CC4A1A382619AEE100FDF4AC /* Info.plist */,
-				CC4A1A352619AEE100FDF4AC /* Preview Content */,
+				CC5598BE262DB6A8008EE8D4 /* AppDelegate.swift */,
+				CC5598C0262DB6A8008EE8D4 /* SceneDelegate.swift */,
+				CC5598C2262DB6A8008EE8D4 /* ContentView.swift */,
+				CC5598C4262DB6AA008EE8D4 /* Assets.xcassets */,
+				CC5598C9262DB6AA008EE8D4 /* LaunchScreen.storyboard */,
+				CC5598CC262DB6AA008EE8D4 /* Info.plist */,
+				CC5598C6262DB6AA008EE8D4 /* Preview Content */,
 			);
-			path = helloword;
+			path = HelloWord_alpha;
 			sourceTree = "<group>";
 		};
-		CC4A1A352619AEE100FDF4AC /* Preview Content */ = {
+		CC5598C6262DB6AA008EE8D4 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				CC4A1A362619AEE100FDF4AC /* Preview Assets.xcassets */,
+				CC5598C7262DB6AA008EE8D4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		CCB28ABD261B5D05004A9A9B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CC4A1A312619AEDF00FDF4AC /* MainView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CCB28ABE261B5D0E004A9A9B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				CC4A1A422619B1E300FDF4AC /* WordViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		CCB28ABF261B5D16004A9A9B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CC4A1A3F2619B05800FDF4AC /* WordModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CC4A1A2B2619AEDF00FDF4AC /* helloword */ = {
+		CC5598BA262DB6A8008EE8D4 /* HelloWord_alpha */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC4A1A3B2619AEE100FDF4AC /* Build configuration list for PBXNativeTarget "helloword" */;
+			buildConfigurationList = CC5598CF262DB6AA008EE8D4 /* Build configuration list for PBXNativeTarget "HelloWord_alpha" */;
 			buildPhases = (
-				CC4A1A282619AEDF00FDF4AC /* Sources */,
-				CC4A1A292619AEDF00FDF4AC /* Frameworks */,
-				CC4A1A2A2619AEDF00FDF4AC /* Resources */,
+				CC5598B7262DB6A8008EE8D4 /* Sources */,
+				CC5598B8262DB6A8008EE8D4 /* Frameworks */,
+				CC5598B9262DB6A8008EE8D4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = helloword;
-			productName = helloword;
-			productReference = CC4A1A2C2619AEDF00FDF4AC /* helloword.app */;
+			name = HelloWord_alpha;
+			productName = HelloWord_alpha;
+			productReference = CC5598BB262DB6A8008EE8D4 /* HelloWord_alpha.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CC4A1A242619AEDF00FDF4AC /* Project object */ = {
+		CC5598B3262DB6A8008EE8D4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					CC4A1A2B2619AEDF00FDF4AC = {
+					CC5598BA262DB6A8008EE8D4 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = CC4A1A272619AEDF00FDF4AC /* Build configuration list for PBXProject "helloword" */;
+			buildConfigurationList = CC5598B6262DB6A8008EE8D4 /* Build configuration list for PBXProject "HelloWord_alpha" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -141,44 +117,55 @@
 				en,
 				Base,
 			);
-			mainGroup = CC4A1A232619AEDF00FDF4AC;
-			productRefGroup = CC4A1A2D2619AEDF00FDF4AC /* Products */;
+			mainGroup = CC5598B2262DB6A8008EE8D4;
+			productRefGroup = CC5598BC262DB6A8008EE8D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CC4A1A2B2619AEDF00FDF4AC /* helloword */,
+				CC5598BA262DB6A8008EE8D4 /* HelloWord_alpha */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CC4A1A2A2619AEDF00FDF4AC /* Resources */ = {
+		CC5598B9262DB6A8008EE8D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC4A1A372619AEE100FDF4AC /* Preview Assets.xcassets in Resources */,
-				CC4A1A342619AEE100FDF4AC /* Assets.xcassets in Resources */,
+				CC5598CB262DB6AA008EE8D4 /* LaunchScreen.storyboard in Resources */,
+				CC5598C8262DB6AA008EE8D4 /* Preview Assets.xcassets in Resources */,
+				CC5598C5262DB6AA008EE8D4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CC4A1A282619AEDF00FDF4AC /* Sources */ = {
+		CC5598B7262DB6A8008EE8D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC4A1A322619AEDF00FDF4AC /* MainView.swift in Sources */,
-				CC4A1A432619B1E300FDF4AC /* WordViewModel.swift in Sources */,
-				CC4A1A402619B05800FDF4AC /* WordModel.swift in Sources */,
-				CC4A1A302619AEDF00FDF4AC /* hellowordApp.swift in Sources */,
+				CC5598BF262DB6A8008EE8D4 /* AppDelegate.swift in Sources */,
+				CC5598C1262DB6A8008EE8D4 /* SceneDelegate.swift in Sources */,
+				CC5598C3262DB6A8008EE8D4 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		CC5598C9262DB6AA008EE8D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC5598CA262DB6AA008EE8D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		CC4A1A392619AEE100FDF4AC /* Debug */ = {
+		CC5598CD262DB6AA008EE8D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -239,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		CC4A1A3A2619AEE100FDF4AC /* Release */ = {
+		CC5598CE262DB6AA008EE8D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -294,44 +281,42 @@
 			};
 			name = Release;
 		};
-		CC4A1A3C2619AEE100FDF4AC /* Debug */ = {
+		CC5598D0262DB6AA008EE8D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"helloword/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HelloWord_alpha/Preview Content\"";
 				DEVELOPMENT_TEAM = 86F3BYCLAK;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = helloword/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = HelloWord_alpha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jaemoo.helloword;
+				PRODUCT_BUNDLE_IDENTIFIER = "jaemoo.HelloWord-alpha";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CC4A1A3D2619AEE100FDF4AC /* Release */ = {
+		CC5598D1262DB6AA008EE8D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"helloword/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HelloWord_alpha/Preview Content\"";
 				DEVELOPMENT_TEAM = 86F3BYCLAK;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = helloword/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = HelloWord_alpha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jaemoo.helloword;
+				PRODUCT_BUNDLE_IDENTIFIER = "jaemoo.HelloWord-alpha";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -341,25 +326,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CC4A1A272619AEDF00FDF4AC /* Build configuration list for PBXProject "helloword" */ = {
+		CC5598B6262DB6A8008EE8D4 /* Build configuration list for PBXProject "HelloWord_alpha" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC4A1A392619AEE100FDF4AC /* Debug */,
-				CC4A1A3A2619AEE100FDF4AC /* Release */,
+				CC5598CD262DB6AA008EE8D4 /* Debug */,
+				CC5598CE262DB6AA008EE8D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC4A1A3B2619AEE100FDF4AC /* Build configuration list for PBXNativeTarget "helloword" */ = {
+		CC5598CF262DB6AA008EE8D4 /* Build configuration list for PBXNativeTarget "HelloWord_alpha" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC4A1A3C2619AEE100FDF4AC /* Debug */,
-				CC4A1A3D2619AEE100FDF4AC /* Release */,
+				CC5598D0262DB6AA008EE8D4 /* Debug */,
+				CC5598D1262DB6AA008EE8D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CC4A1A242619AEDF00FDF4AC /* Project object */;
+	rootObject = CC5598B3262DB6A8008EE8D4 /* Project object */;
 }

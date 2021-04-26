@@ -11,7 +11,7 @@ import RealmSwift
 class Word: Object, Identifiable {
     @objc dynamic var id: Date = Date()
     @objc dynamic var word: String = ""
-    @objc dynamic var isMemorised: Bool = false
+    @objc dynamic var isMemorized: Bool = false
     @objc dynamic var isDeleted: Bool = false
     
     convenience init(newWord: String) {

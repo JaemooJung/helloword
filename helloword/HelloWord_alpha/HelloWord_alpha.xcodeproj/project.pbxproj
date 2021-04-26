@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC28EDE726305798000913F4 /* WordGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28EDE626305798000913F4 /* WordGroupView.swift */; };
+		CC28EDEA263058C9000913F4 /* WordGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28EDE9263058C9000913F4 /* WordGroup.swift */; };
+		CC28EDED26305945000913F4 /* WordGroupListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC28EDEC26305945000913F4 /* WordGroupListViewModel.swift */; };
+		CC4C297426314B4600B37F36 /* AddWordGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4C297326314B4600B37F36 /* AddWordGroupView.swift */; };
 		CC5598BF262DB6A8008EE8D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5598BE262DB6A8008EE8D4 /* AppDelegate.swift */; };
 		CC5598C1262DB6A8008EE8D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5598C0262DB6A8008EE8D4 /* SceneDelegate.swift */; };
 		CC5598C3262DB6A8008EE8D4 /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5598C2262DB6A8008EE8D4 /* WordListView.swift */; };
@@ -17,9 +21,14 @@
 		CC5598DB262DB84B008EE8D4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CC5598DA262DB84B008EE8D4 /* RealmSwift */; };
 		CC5598DE262DBEE0008EE8D4 /* WordListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5598DD262DBEE0008EE8D4 /* WordListViewModel.swift */; };
 		CC5598E1262DBFA7008EE8D4 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5598E0262DBFA7008EE8D4 /* Word.swift */; };
+		CC5C465C2630243F005B1AF8 /* 임시코드저장소.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C465B2630243F005B1AF8 /* 임시코드저장소.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC28EDE626305798000913F4 /* WordGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGroupView.swift; sourceTree = "<group>"; };
+		CC28EDE9263058C9000913F4 /* WordGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGroup.swift; sourceTree = "<group>"; };
+		CC28EDEC26305945000913F4 /* WordGroupListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGroupListViewModel.swift; sourceTree = "<group>"; };
+		CC4C297326314B4600B37F36 /* AddWordGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordGroupView.swift; sourceTree = "<group>"; };
 		CC5598BB262DB6A8008EE8D4 /* HelloWord_alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWord_alpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5598BE262DB6A8008EE8D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5598C0262DB6A8008EE8D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +39,7 @@
 		CC5598CC262DB6AA008EE8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC5598DD262DBEE0008EE8D4 /* WordListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewModel.swift; sourceTree = "<group>"; };
 		CC5598E0262DBFA7008EE8D4 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		CC5C465B2630243F005B1AF8 /* 임시코드저장소.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "임시코드저장소.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,7 @@
 				CC5598C4262DB6AA008EE8D4 /* Assets.xcassets */,
 				CC5598C9262DB6AA008EE8D4 /* LaunchScreen.storyboard */,
 				CC5598CC262DB6AA008EE8D4 /* Info.plist */,
+				CC5C465B2630243F005B1AF8 /* 임시코드저장소.swift */,
 				CC5598C6262DB6AA008EE8D4 /* Preview Content */,
 			);
 			path = HelloWord_alpha;
@@ -89,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				CC5598C2262DB6A8008EE8D4 /* WordListView.swift */,
+				CC28EDE626305798000913F4 /* WordGroupView.swift */,
+				CC4C297326314B4600B37F36 /* AddWordGroupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -97,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				CC5598DD262DBEE0008EE8D4 /* WordListViewModel.swift */,
+				CC28EDEC26305945000913F4 /* WordGroupListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -104,6 +118,7 @@
 		CC5598D5262DB72B008EE8D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CC28EDE9263058C9000913F4 /* WordGroup.swift */,
 				CC5598E0262DBFA7008EE8D4 /* Word.swift */,
 			);
 			path = Models;
@@ -186,10 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5C465C2630243F005B1AF8 /* 임시코드저장소.swift in Sources */,
 				CC5598BF262DB6A8008EE8D4 /* AppDelegate.swift in Sources */,
+				CC28EDED26305945000913F4 /* WordGroupListViewModel.swift in Sources */,
 				CC5598C1262DB6A8008EE8D4 /* SceneDelegate.swift in Sources */,
+				CC28EDEA263058C9000913F4 /* WordGroup.swift in Sources */,
+				CC28EDE726305798000913F4 /* WordGroupView.swift in Sources */,
 				CC5598E1262DBFA7008EE8D4 /* Word.swift in Sources */,
 				CC5598DE262DBEE0008EE8D4 /* WordListViewModel.swift in Sources */,
+				CC4C297426314B4600B37F36 /* AddWordGroupView.swift in Sources */,
 				CC5598C3262DB6A8008EE8D4 /* WordListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

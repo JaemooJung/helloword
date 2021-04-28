@@ -44,3 +44,7 @@ import Foundation
 //                fetchData()
 //            }
 //        }
+
+
+// freeze를 통해 리스트를 얼릴경우 내용을 수정하고 싶을 때 resolve 해줘여함.
+// Button(action: { wordListViewModel.deleteWord(word: wordListViewModel.realm!.resolve(ThreadSafeReference(to: word))!) }, label: {Text("Delete")})

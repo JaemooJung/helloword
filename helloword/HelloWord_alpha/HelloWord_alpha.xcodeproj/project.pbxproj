@@ -22,6 +22,7 @@
 		CC5598DE262DBEE0008EE8D4 /* WordListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5598DD262DBEE0008EE8D4 /* WordListViewModel.swift */; };
 		CC5598E1262DBFA7008EE8D4 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5598E0262DBFA7008EE8D4 /* Word.swift */; };
 		CC5C465C2630243F005B1AF8 /* 임시코드저장소.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C465B2630243F005B1AF8 /* 임시코드저장소.swift */; };
+		CCD23D8C263730560091487B /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD23D8B263730560091487B /* Realm+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CC5598DD262DBEE0008EE8D4 /* WordListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewModel.swift; sourceTree = "<group>"; };
 		CC5598E0262DBFA7008EE8D4 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		CC5C465B2630243F005B1AF8 /* 임시코드저장소.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "임시코드저장소.swift"; sourceTree = "<group>"; };
+		CCD23D8B263730560091487B /* Realm+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		CC5598BD262DB6A8008EE8D4 /* HelloWord_alpha */ = {
 			isa = PBXGroup;
 			children = (
+				CCD23D8E263730600091487B /* Extensions */,
 				CC5598D5262DB72B008EE8D4 /* Models */,
 				CC5598D4262DB724008EE8D4 /* ViewModels */,
 				CC5598D3262DB71E008EE8D4 /* Views */,
@@ -122,6 +125,14 @@
 				CC5598E0262DBFA7008EE8D4 /* Word.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CCD23D8E263730600091487B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CCD23D8B263730560091487B /* Realm+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 				CC5598E1262DBFA7008EE8D4 /* Word.swift in Sources */,
 				CC5598DE262DBEE0008EE8D4 /* WordListViewModel.swift in Sources */,
 				CC4C297426314B4600B37F36 /* AddWordGroupView.swift in Sources */,
+				CCD23D8C263730560091487B /* Realm+.swift in Sources */,
 				CC5598C3262DB6A8008EE8D4 /* WordListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

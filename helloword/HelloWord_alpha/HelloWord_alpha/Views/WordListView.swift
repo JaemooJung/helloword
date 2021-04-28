@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct WordListView: View {
     
@@ -31,6 +32,8 @@ struct WordListView: View {
         }
     }
     
+    //MARK: Body
+    
     var body: some View {
         
         HStack(spacing: 0) {
@@ -45,12 +48,12 @@ struct WordListView: View {
                     addNewWordTextInput.padding()
                     
                     // 안외운단어
-                    List {
-                        ForEach(self.wordListViewModel.words.filter { word in !word.isDeleted && !word.isMemorized}) { word in
+                    SwiftUI.List {
+                        ForEach(self.wordListViewModel.words.reversed().filter { word in !word.isMemorized && !word.isDeleted }) { word in
                             HStack {
                                 Text(word.word)
                                 Spacer()
-                                Button(action: { wordListViewModel.memorizeWord(wordMemorized: word) }, label: {Text("Memorized")})
+                                Button(action: { wordListViewModel.markMemorize(word: word) }, label: {Text("Memorized")})
                                 Button(action: { wordListViewModel.deleteWord(word: word) }, label: {Text("Delete")})
                             }
                         }.buttonStyle(BorderlessButtonStyle())
@@ -61,14 +64,14 @@ struct WordListView: View {
                                 HStack {
                                     Text(word.word)
                                     Spacer()
-                                    Button(action: { wordListViewModel.dememorizeWord(wordDememorized: word) }, label: {Text("Dememorized")})
+                                    Button(action: { wordListViewModel.markMemorize(word: word) }, label: {Text("Dememorized")})
                                     Button(action: { wordListViewModel.deleteWord(word: word) }, label: {Text("Delete")})
                                 }
                             }.buttonStyle(BorderlessButtonStyle())
                         }
                     }
                 }
-                .navigationBarTitle("WORDS")
+                .navigationBarTitle(self.wordListViewModel.selectedWordGroup?.groupName ?? "somethinggoeswrong")
                 .navigationBarItems(
                     leading: Button(action:{ withAnimation(.easeInOut) { wordGroupListViewModel.showGroupList.toggle() }},
                                     label: { Image(systemName: "line.horizontal.3")}),
@@ -80,7 +83,12 @@ struct WordListView: View {
         .frame(width: UIScreen.main.bounds.width)
         .offset(x: wordGroupListViewModel.showGroupList ? UIScreen.main.bounds.maxX/2 : -UIScreen.main.bounds.maxX/2)
         .environmentObject(wordGroupListViewModel)
+        .environmentObject(wordListViewModel)
     }
+    
+    //MARK: Functions
+    
+    
 }
 
 struct WordListView_Previews: PreviewProvider {

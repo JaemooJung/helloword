@@ -12,20 +12,14 @@ import RealmSwift
 class WordGroupListViewModel: ObservableObject {
     // MARK: Model
     @Published var wordGroups: [WordGroup] = []
-//        [WordGroup(groupName: "TOEIC", startLanguage: "English", targetLanguage: "Korean"),
-//                                          WordGroup(groupName: "TOPLE", startLanguage: "English", targetLanguage: "Korean"),
-//                                          WordGroup(groupName: "DELF", startLanguage: "French", targetLanguage: "English")]
-    
-    
+
     //MARK: init
     init() {
         fetchData()
     }
     
-    
     // MARK: Variables
     @Published var showGroupList = false
-    
     
     // MARK: Functions
     

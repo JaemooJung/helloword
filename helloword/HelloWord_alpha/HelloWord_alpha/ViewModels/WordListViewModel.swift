@@ -5,107 +5,109 @@
 //  Created by JaemooJung on 2021/04/19.
 //
 
-import SwiftUI
+import Foundation
 import Combine
 import RealmSwift
 
 class WordListViewModel: ObservableObject {
+    
     //MARK: Model
     
-    // WordListView에 뿌릴 words 선언
-    @Published var words: [Word] = []
-
+    @Published var selectedWordGroup: WordGroup? = nil
+    @Published var words = List<Word>()
+    
+    //MARK: Variables
+    
+    var lastWordGroupPrimaryKey:String = "" {
+        willSet {
+            UserDefaults.standard.set(newValue, forKey: "lastWordGroupPrimaryKey")
+        }
+    }
+    
+    //MARK: Token
+    
+    var token: NotificationToken? = nil
+    
     //MARK: init
+
+    var realm: Realm?
     
     init() {
-        fetchData()
+        
+        let realm = try? Realm()
+        self.realm = realm
+        
+        let pk = UserDefaults.standard.string(forKey: "lastWordGroupPrimaryKey") ?? ""
+        
+        if changeWordGroupAndWordList(groupPK: pk, realm: realm) == false {
+            let newGroup = WordGroup(groupName: "Words", startLanguage: "English", targetLanguage: "Korean")
+            try? realm?.write {
+                realm?.add(newGroup)
+                newGroup.words.append(Word(newWord: "Hello"))
+            }
+            let initialWordGroup = realm?.objects(WordGroup.self).first
+            self.selectedWordGroup = initialWordGroup
+            self.words = initialWordGroup!.words
+            self.lastWordGroupPrimaryKey = initialWordGroup!._id
+            token = selectedWordGroup?.words.observe { changes in
+                switch changes {
+                case .error(_): break
+                case .initial(_): break
+                case .update(_, deletions: _, insertions: _, modifications: _): self.objectWillChange.send()
+                }
+            }
+            UserDefaults.standard.set(initialWordGroup!._id, forKey: "lastWordGroupPrimaryKey")
+        }
+        
+//        token = selectedWordGroup?.observe { changes in
+//            switch changes {
+//            case .error(_): break
+//            case .change(_, _): self.objectWillChange.send()
+//            case .deleted: self.selectedWordGroup = nil
+//            }
+//        }
     }
-
+    
     //MARK: Functions
     
-    // DB에서 단어 받아오기
-    func fetchData() {
-        guard let dbRef = try? Realm() else { return }
-        let results = dbRef.objects(Word.self)
-        //compactMap: 어레이에서 Nil을 제거해주고 옵셔널바인딩으로 묶어줌...
-        let words = results.compactMap { (word) -> Word? in
-            return word
+    func changeWordGroupAndWordList(groupPK: String, realm: Realm?) -> Bool {
+        if let newWordGroup = realm?.object(ofType: WordGroup.self, forPrimaryKey: groupPK) {
+            self.selectedWordGroup = newWordGroup
+            self.words = newWordGroup.words
+            token = selectedWordGroup?.words.observe { changes in
+                switch changes {
+                case .error(_): break
+                case .initial(_): break
+                case .update(_, deletions: _, insertions: _, modifications: _): self.objectWillChange.send()
+                }
+            }
+            return true
+        } else {
+            return false
         }
-        self.words = Array(words).reversed()
     }
+    
+    //MARK: Intents
     
     // 단어 추가
     func addNewWord(newWord: String) {
         if newWord != "" {
-            let word = Word(newWord: newWord)
-            guard let dbRef = try? Realm() else { return }
-            try? dbRef.write {
-                dbRef.add(word)
-                fetchData()
+            if let realm = selectedWordGroup?.realm {
+                try? realm.write {
+                    selectedWordGroup?.words.append(Word(newWord: newWord))
+                }
             }
         }
     }
     
-    // 외운 단어로 표시
-    func memorizeWord(wordMemorized: Word) {
-        guard let dbRef = try? Realm() else { return }
-        try! dbRef.write {
-            wordMemorized.isMemorized = true
-        }
-        fetchData()
-    }
-    
-    // 안 외운 단어로 표시
-    func dememorizeWord(wordDememorized: Word) {
-        guard let dbRef = try? Realm() else { return }
-        try! dbRef.write {
-            wordDememorized.isMemorized = false
-        }
-        fetchData()
+    // 외운 단어/안 외운 단어 전환
+    func markMemorize(word: Word) {
+        word.markMemorized()
     }
     
     // 단어 삭제
     func deleteWord(word: Word) {
-        guard let dbRef = try? Realm() else { return }
-        try! dbRef.write {
-            word.isDeleted = true
-        }
-        fetchData()
+        word.markDeleted()
     }
-    
-    
-    
-    
-    
-    
-    
-    
-// 단어 삭제와 관련된 구 코드
-//    func deleteWord(at offset: IndexSet) {
-//        guard let dbRef = try? Realm() else { return }
-//        let wordToDelete = offset.map { self.words.reversed()[$0] }
-//        _ = wordToDelete.compactMap { word in
-//            try! dbRef.write {
-//                word.isDeleted = true
-//            }
-//            fetchData()
-//        }
-// 2번 옵션
-//        guard let dbRef = try? Realm() else { return }
-//        let ids = offset.map { self.words.reversed()[$0].id }
-//        let wordToDelete = dbRef.objects(Word.self).filter("id IN %@", ids)
-//        try! dbRef.write {
-//            dbRef.delete(wordToDelete)
-//            fetchData()
-//        }
-        
-        // 1번 옵션
-//        _ = wordToDelete.compactMap{ word in
-//            try! dbRef.write {
-//                dbRef.delete(
-//                fetchData()
-//            }
-//        }
-
     
 }

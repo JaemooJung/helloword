@@ -10,6 +10,7 @@ import SwiftUI
 struct WordGroupView: View {
     
     @EnvironmentObject var wordGroupListViewModel: WordGroupListViewModel
+    @EnvironmentObject var wordListViewModel: WordListViewModel
     @State var isAddWordGroupViewPresented: Bool = false
 
     let screenBound = UIScreen.main.bounds
@@ -19,12 +20,19 @@ struct WordGroupView: View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(self.wordGroupListViewModel.wordGroups) { wordGroup in
+                    ForEach(self.wordGroupListViewModel.wordGroups.reversed()) { wordGroup in
                         HStack {
                             VStack(alignment: .leading) {
                                 Text("\(wordGroup.startLanguage) -> \(wordGroup.targetLanguage)").font(.caption).padding(.top)
                                 Text(wordGroup.groupName).font(.largeTitle).bold().padding(.bottom)
                             }
+                            Button(action: {
+                                _ = wordListViewModel.changeWordGroupAndWordList(groupPK: wordGroup._id, realm: wordListViewModel.realm)
+                                wordListViewModel.lastWordGroupPrimaryKey = wordGroup._id
+                                withAnimation(.easeInOut) {
+                                    wordGroupListViewModel.showGroupList.toggle()
+                                }
+                            }, label: {})
                         }
                     }
                     .listStyle(GroupedListStyle())

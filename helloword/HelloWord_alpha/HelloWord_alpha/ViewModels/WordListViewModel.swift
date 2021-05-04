@@ -45,32 +45,20 @@ class WordListViewModel: ObservableObject {
                 realm?.add(newGroup)
                 newGroup.words.append(Word(newWord: "Hello"))
             }
-            let initialWordGroup = realm?.objects(WordGroup.self).first
-            self.selectedWordGroup = initialWordGroup
-            self.words = initialWordGroup!.words
-            self.lastWordGroupPrimaryKey = initialWordGroup!._id
-            token = selectedWordGroup?.words.observe { changes in
-                switch changes {
-                case .error(_): break
-                case .initial(_): break
-                case .update(_, deletions: _, insertions: _, modifications: _): self.objectWillChange.send()
-                }
-            }
-            UserDefaults.standard.set(initialWordGroup!._id, forKey: "lastWordGroupPrimaryKey")
+            _ = changeWordGroupAndWordList(groupPK: newGroup._id, realm: realm)
+            UserDefaults.standard.set(newGroup._id, forKey: "lastWordGroupPrimaryKey")
         }
         
-//        token = selectedWordGroup?.observe { changes in
-//            switch changes {
-//            case .error(_): break
-//            case .change(_, _): self.objectWillChange.send()
-//            case .deleted: self.selectedWordGroup = nil
-//            }
-//        }
+
     }
     
     //MARK: Functions
     
     func changeWordGroupAndWordList(groupPK: String, realm: Realm?) -> Bool {
+        if let oldToken = self.token {
+            // 옵저빙이 끝났으면 이전 토큰은 프리 해줘야 함.
+            oldToken.invalidate()
+        }
         if let newWordGroup = realm?.object(ofType: WordGroup.self, forPrimaryKey: groupPK) {
             self.selectedWordGroup = newWordGroup
             self.words = newWordGroup.words

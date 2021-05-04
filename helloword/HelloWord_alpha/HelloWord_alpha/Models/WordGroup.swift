@@ -38,4 +38,24 @@ final class WordGroup: Object, ObjectKeyIdentifiable {
             self.groupName = newGroupName
         }
     }
+    
+    func update(newStartLanguage: String) {
+        if let realm = self.realm {
+            try? realm.write {
+                self.startLanguage = newStartLanguage
+            }
+        } else {
+            self.startLanguage = newStartLanguage
+        }
+    }
+    
+    func update(newTargetLanguage: String) {
+        if let realm = self.realm {
+            try? realm.write {
+                self.targetLanguage = newTargetLanguage
+            }
+        } else {
+            self.targetLanguage = newTargetLanguage
+        }
+    }
 }

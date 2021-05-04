@@ -1,46 +1,65 @@
 //
-//  groupListViewModel.swift
+//  WordGroupListViewModel2.swift
 //  HelloWord_alpha
 //
-//  Created by JaemooJung on 2021/04/21.
+//  Created by JaemooJung on 2021/04/30.
 //
 
-import SwiftUI
+import Foundation
 import Combine
 import RealmSwift
 
 class WordGroupListViewModel: ObservableObject {
     // MARK: Model
-    @Published var wordGroups: [WordGroup] = []
-
+    @Published var wordGroups: Results<WordGroup>?
+    
+    var token: NotificationToken?
+    
     //MARK: init
+    var realm: Realm?
+    
     init() {
-        fetchData()
+        let realm = try? Realm()
+        self.realm = realm
+        
+        if let fetchedGroups = realm?.objects(WordGroup.self) {
+            self.wordGroups = fetchedGroups
+        }
+        token = wordGroups!.observe { [self] (changes: RealmCollectionChange) in
+            switch changes {
+            case .initial: break
+            case .update(_, deletions: _, insertions: _, modifications: _): objectWillChange.send()
+            case.error: break
+            }
+            
+        }
     }
     
     // MARK: Variables
     @Published var showGroupList = false
     
     // MARK: Functions
-    
-    func fetchData() {
-        guard let dbRef = try? Realm() else { return }
-        let results = dbRef.objects(WordGroup.self)
-        //compactMap: 어레이에서 Nil을 제거해주고 옵셔널바인딩으로 묶어줌...
-        let wordGroups = results.compactMap { (WordGroup) -> WordGroup? in
-            return WordGroup
-        }
-        self.wordGroups = Array(wordGroups)
-    }
-    
     func addNewWordGroup(groupName:String, wordLanguage: String, meaningLanguage: String) {
         if groupName != "" {
             let newWordGroup = WordGroup(groupName: groupName, startLanguage: wordLanguage, targetLanguage: meaningLanguage)
-            guard let dbRef = try? Realm() else { return }
-            try? dbRef.write {
-                dbRef.add(newWordGroup)
-                fetchData()
+            try? self.realm!.write {
+                self.realm!.add(newWordGroup)
             }
         }
+    }
+    
+    func deleteWordGroup(at indexSet: IndexSet) {
+        
+        if let index = indexSet.first,
+           let realm = wordGroups![index].realm {
+            try? realm.write {
+                realm.delete(wordGroups![index].words)
+                realm.delete(wordGroups![index])
+            }
+        }
+    }
+    
+    func editWordGroup(groupPK: String) {
+        
     }
 }

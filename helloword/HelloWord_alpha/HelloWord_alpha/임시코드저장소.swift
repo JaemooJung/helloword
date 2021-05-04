@@ -48,3 +48,22 @@ import Foundation
 
 // freeze를 통해 리스트를 얼릴경우 내용을 수정하고 싶을 때 resolve 해줘여함.
 // Button(action: { wordListViewModel.deleteWord(word: wordListViewModel.realm!.resolve(ThreadSafeReference(to: word))!) }, label: {Text("Delete")})
+
+//토큰 옵저빙
+//        token = selectedWordGroup?.observe { changes in
+//            switch changes {
+//            case .error(_): break
+//            case .change(_, _): self.objectWillChange.send()
+//            case .deleted: self.selectedWordGroup = nil
+//            }
+//        }
+
+
+// 삭제버튼
+//Button(action: { isGroupDeleteAlertPresented.toggle() }, label: {Text("Delete").foregroundColor(.red)})
+//    .alert(isPresented: $isGroupDeleteAlertPresented) {
+//        Alert(title: Text("Delete Group"),
+//              message: Text("Are you sure? All Words incloud in the trash will be permanantly deleted"),
+//              primaryButton: .destructive(Text("Yes"), action: {}),
+//              secondaryButton: .cancel())
+//    }

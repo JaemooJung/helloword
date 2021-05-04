@@ -32,8 +32,6 @@ struct AddWordGroupView: View {
                     }
                     
                 }
-                
-
                 Button(action: {
                     self.wordGroupListViewModel.addNewWordGroup(groupName: groupName, wordLanguage: wordLanguage, meaningLanguage: meaningLanguage)
                     self.presentationMode.wrappedValue.dismiss()
@@ -41,11 +39,7 @@ struct AddWordGroupView: View {
                        label: {
                     Text("Done")
                 })
-            
-                
             }
-
-            
             .navigationTitle("Add new word group")
             .navigationBarItems(trailing: Button(action: {self.presentationMode.wrappedValue.dismiss()}, label: {
                 Text("Cancel").foregroundColor(.red)
